@@ -40,7 +40,7 @@ const Footer = () => {
         
         <div className="border-t border-primary/10 pt-8 mt-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-foreground/60">&copy; &copy; {new Date().getUTCFullYear()} Dutix. All rights reserved.</p>
+            <p className="text-foreground/60">&copy; {new Date().getUTCFullYear()} Dutix. All rights reserved.</p>
             <div className="flex gap-8 text-foreground/60">
               <a href="#" className="hover:text-primary transition-colors">Terms</a>
               <a href="#" className="hover:text-primary transition-colors">Privacy</a>
