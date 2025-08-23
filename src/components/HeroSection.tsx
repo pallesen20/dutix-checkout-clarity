@@ -46,13 +46,7 @@ const HeroSection = () => {
 
           {/* Primary CTA */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button className="btn-primary flex items-center gap-3 text-xl px-10 py-6">
-              <ShoppingCart className="w-6 h-6" />
-              Add Dutix to Your Browser
-            </Button>
-            <Button className="btn-secondary text-xl px-10 py-6">
-              Watch Demo
-            </Button>
+            <Button className="btn-primary text-xl px-12 py-6 mb-6">🚀 Add to Browser - It's Free</Button>
           </div>
 
           {/* Calculator card */}
