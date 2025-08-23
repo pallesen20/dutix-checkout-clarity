@@ -19,11 +19,12 @@ All colors MUST be HSL.
 
     --primary: 145 63% 49%;
     --primary-foreground: 0 0% 100%;
+    --primary-glow: 145 63% 60%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 240 5% 96%;
     --secondary-foreground: 145 63% 49%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 240 5% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
     --accent: 145 63% 96%;
@@ -32,11 +33,22 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 83 20% 56%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 145 63% 49%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Modern gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(145 63% 98%) 50%, hsl(var(--background)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(145 63% 99%) 100%);
+
+    /* Modern shadows */
+    --shadow-soft: 0 2px 20px -4px hsl(var(--primary) / 0.1);
+    --shadow-medium: 0 8px 40px -8px hsl(var(--primary) / 0.15);
+    --shadow-strong: 0 20px 60px -12px hsl(var(--primary) / 0.25);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
 
     --sidebar-background: 0 0% 98%;
 
@@ -111,14 +123,37 @@ All colors MUST be HSL.
   }
 
   .section-padding {
-    @apply py-16 lg:py-24;
+    @apply py-20 lg:py-32;
   }
 
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl;
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:-translate-y-0.5;
+    box-shadow: var(--shadow-medium);
+  }
+
+  .btn-primary:hover {
+    box-shadow: var(--shadow-strong);
   }
 
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 border border-primary/20;
+    @apply bg-white text-primary hover:bg-primary/5 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 border-2 border-primary/20 hover:border-primary/40 transform hover:-translate-y-0.5;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .modern-card {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-medium);
+    @apply border border-primary/10 rounded-2xl backdrop-blur-sm;
+  }
+
+  .hero-glow {
+    background: var(--gradient-hero);
+  }
+
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

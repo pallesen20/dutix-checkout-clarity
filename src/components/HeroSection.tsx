@@ -14,52 +14,78 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="section-padding bg-gradient-to-br from-background to-accent/20">
-      <div className="container">
-        <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-6">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+    <section className="section-padding hero-glow relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-primary/5 blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-primary/5 blur-3xl"></div>
+      </div>
+      
+      <div className="container relative">
+        <div className="text-center max-w-5xl mx-auto">
+          {/* Badge */}
+          <div className="mb-8">
+            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm text-primary px-6 py-3 rounded-full text-sm font-semibold shadow-lg border border-primary/20">
               <Calculator className="w-4 h-4" />
-              See True Prices Instantly
+              ✨ See True Prices Instantly
             </div>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Stop Getting Surprised by
-            <span className="text-primary block">Hidden Fees</span>
+          {/* Main headline */}
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+            Stop Getting
+            <span className="text-gradient block">Surprised by Fees</span>
           </h1>
           
-          <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-            Dutix shows you the final price including import duties, VAT, and extra fees before you buy. 
+          {/* Subheading */}
+          <p className="text-2xl text-foreground/70 mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
+            Dutix reveals the <strong className="text-primary">true final price</strong> including import duties, VAT, and extra fees before you buy. 
+            <br className="hidden md:block" />
             No more checkout surprises.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-12">
-            <Button className="btn-primary flex items-center gap-2">
-              <ShoppingCart className="w-5 h-5" />
+          {/* Primary CTA */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <Button className="btn-primary flex items-center gap-3 text-xl px-10 py-6">
+              <ShoppingCart className="w-6 h-6" />
               Add Dutix to Your Browser
             </Button>
-            <Button variant="outline" className="btn-secondary">
-              Try Demo
+            <Button className="btn-secondary text-xl px-10 py-6">
+              Watch Demo
             </Button>
           </div>
 
-          <div className="bg-card border rounded-xl p-6 max-w-2xl mx-auto">
-            <h3 className="text-lg font-semibold mb-4">Try it now - Paste your checkout link</h3>
-            <div className="flex flex-col sm:flex-row gap-3">
+          {/* Calculator card */}
+          <div className="modern-card p-8 max-w-3xl mx-auto">
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold mb-2">Try it now</h3>
+              <p className="text-foreground/60">Paste any checkout link to see instant price calculations</p>
+            </div>
+            <div className="flex flex-col lg:flex-row gap-4">
               <Input
                 placeholder="https://shop.example.com/checkout/abc123..."
                 value={checkoutUrl}
                 onChange={(e) => setCheckoutUrl(e.target.value)}
-                className="flex-1"
+                className="flex-1 h-14 text-lg border-primary/20 focus:border-primary rounded-xl"
               />
-              <Button onClick={handleCalculate} className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button onClick={handleCalculate} className="btn-primary h-14 px-8 whitespace-nowrap">
                 Calculate Final Price
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground mt-3">
-              Get instant calculations for duties, taxes, and shipping fees
-            </p>
+            <div className="flex items-center justify-center gap-6 mt-6 pt-6 border-t border-primary/10">
+              <div className="flex items-center gap-2 text-sm text-foreground/60">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                Import duties
+              </div>
+              <div className="flex items-center gap-2 text-sm text-foreground/60">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                VAT & taxes
+              </div>
+              <div className="flex items-center gap-2 text-sm text-foreground/60">
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                Shipping fees
+              </div>
+            </div>
           </div>
         </div>
       </div>
