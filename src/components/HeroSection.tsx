@@ -32,7 +32,7 @@ const HeroSection = () => {
           </div>
           
           {/* Main headline */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight" style={{ lineHeight: 1.25 }}>
             Stop Getting
             <span className="text-gradient block">Surprised by Fees</span>
           </h1>
