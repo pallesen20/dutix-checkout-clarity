@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Calculator, Shield, Truck, CreditCard, Globe, AlertTriangle } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const CrossBorderShoppingTips = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -497,51 +498,7 @@ const CrossBorderShoppingTips = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 py-12 bg-muted/30">
-        <div className="container">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-2xl font-bold text-gradient mb-4">Dutix</div>
-              <p className="text-muted-foreground text-sm">
-                Making cross-border shopping transparent and predictable.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Resources</h3>
-              <ul className="space-y-2 text-sm">
-                <li><a href="/" className="text-muted-foreground hover:text-primary transition-colors">Home</a></li>
-                <li><a href="/cross-border-shopping-tips" className="text-muted-foreground hover:text-primary transition-colors">Shopping Tips</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Blog</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Support</h3>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Help Center</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">About</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-border/50 mt-8 pt-8 text-center">
-            <p className="text-muted-foreground text-sm">
-              © 2024 Dutix. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
