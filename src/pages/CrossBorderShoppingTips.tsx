@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Calculator, Shield, Truck, CreditCard, Globe, AlertTriangle } from "lucide-react";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const CrossBorderShoppingTips = () => {
@@ -30,18 +31,7 @@ const CrossBorderShoppingTips = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border/50 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container py-4">
-          <div className="flex items-center justify-between">
-            <a href="/" className="text-2xl font-bold text-gradient">Dutix</a>
-            <nav className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-muted-foreground hover:text-primary transition-colors">Home</a>
-              <a href="/cross-border-shopping-tips" className="text-primary font-medium">Shopping Tips</a>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main>
         {/* Hero Section */}
