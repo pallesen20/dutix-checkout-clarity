@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import CrossBorderShoppingTips from "./pages/CrossBorderShoppingTips";
+import CustomsDutyExtension from "./pages/CustomsDutyExtension";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -18,6 +19,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/cross-border-shopping-tips" element={<CrossBorderShoppingTips />} />
+          <Route path="/customs-duty-extension" element={<CustomsDutyExtension />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
