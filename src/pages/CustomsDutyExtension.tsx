@@ -1,4 +1,4 @@
-import { ChevronDown, Chrome, Download, Calculator, Shield, Zap, CheckCircle, AlertTriangle, Globe } from "lucide-react";
+import { ChevronDown, Chrome, Download, Calculator, Shield, Zap, CheckCircle, AlertTriangle, Monitor } from "lucide-react";
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -36,7 +36,7 @@ const CustomsDutyExtension = () => {
     },
     {
       name: "Firefox",
-      icon: <Globe className="h-12 w-12 text-orange-500" />,
+      icon: <Monitor className="h-12 w-12 text-orange-500" />,
       users: "500K+ users", 
       available: true
     }
