@@ -12,7 +12,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <Button className="btn-primary">
-                🚀 Add to Browser
+                Add to Browser
               </Button>
             </div>
           </div>
