@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ComingSoonDialog from "./ComingSoonDialog";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -34,8 +36,11 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <Button className="btn-primary ml-4">
-              🚀 Add to Browser
+            <Button 
+              onClick={() => setIsDialogOpen(true)}
+              className="btn-primary ml-4 add-to-browser-btn"
+            >
+              Add to Browser
             </Button>
           </nav>
 
@@ -68,14 +73,19 @@ const Header = () => {
                 </a>
               ))}
               <div className="pt-2">
-                <Button className="btn-primary w-full">
-                  🚀 Add to Browser
+                <Button 
+                  onClick={() => setIsDialogOpen(true)}
+                  className="btn-primary w-full add-to-browser-btn"
+                >
+                  Add to Browser
                 </Button>
               </div>
             </nav>
           </div>
         )}
       </div>
+
+      <ComingSoonDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
     </header>
   );
 };
