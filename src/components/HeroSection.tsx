@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Calculator, ShoppingCart } from "lucide-react";
+import { Calculator } from "lucide-react";
+import ComingSoonDialog from "./ComingSoonDialog";
 
 const HeroSection = () => {
   const [checkoutUrl, setCheckoutUrl] = useState("");
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const handleCalculate = () => {
     if (checkoutUrl) {
@@ -27,7 +29,7 @@ const HeroSection = () => {
           <div className="mb-8">
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm text-primary px-6 py-3 rounded-full text-sm font-semibold shadow-lg border border-primary/20">
               <Calculator className="w-4 h-4" />
-              ✨ See True Prices Instantly
+              See True Prices Instantly
             </div>
           </div>
           
@@ -46,7 +48,12 @@ const HeroSection = () => {
 
           {/* Primary CTA */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button className="btn-primary text-xl px-12 py-6 mb-6">🚀 Add to Browser - It's Free</Button>
+            <Button 
+              onClick={() => setIsDialogOpen(true)}
+              className="btn-primary text-xl px-12 py-6 mb-6 add-to-browser-btn"
+            >
+              Add to Browser - It's Free
+            </Button>
           </div>
 
           {/* Calculator card */}
@@ -83,6 +90,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      <ComingSoonDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
     </section>
   );
 };

@@ -3,7 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import ExtensionDemo from "@/components/ExtensionDemo";
 import WhyDutixSection from "@/components/WhyDutixSection";
-import BrowserExtensionSection from "@/components/BrowserExtensionSection";
+import ChromeExtensionSection from "@/components/ChromeExtensionSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,7 +15,7 @@ const Index = () => {
         <HowItWorksSection />
         <ExtensionDemo />
         <WhyDutixSection />
-        <BrowserExtensionSection />
+        <ChromeExtensionSection />
       </main>
       <Footer />
     </div>
