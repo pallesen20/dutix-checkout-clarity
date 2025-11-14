@@ -1,10 +1,6 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import ComingSoonDialog from "./ComingSoonDialog";
 
 const Footer = () => {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-
   return (
     <footer className="bg-foreground/5 border-t border-primary/10">
       <div className="container py-16">
@@ -15,11 +11,8 @@ const Footer = () => {
               See the true price before you buy. No more surprise fees, duties, or taxes at checkout.
             </p>
             <div className="flex gap-4">
-              <Button 
-                className="btn-primary add-to-browser-btn"
-                onClick={() => setIsDialogOpen(true)}
-              >
-                Add to Browser
+              <Button className="btn-primary">
+                🚀 Add to Browser
               </Button>
             </div>
           </div>
@@ -56,7 +49,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <ComingSoonDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
     </footer>
   );
 };
