@@ -1,22 +1,12 @@
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-599FWKZL');
-
 function loadHeader() {
   const headerHTML = `
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-599FWKZL"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
     <header class="border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
       <div class="container mx-auto px-4 py-4">
         <div class="flex items-center justify-between">
           <a href="/" class="text-2xl font-bold text-gradient">Dutix</a>
           
           <nav class="hidden md:flex items-center space-x-8">
-            <a href="/" class="text-gray-600 hover:text-emerald-600 transition-colors">Home</a>
+            //<a href="/" class="text-gray-600 hover:text-emerald-600 transition-colors">Home</a>
             <a href="/cross-border-shopping-tips.html" class="text-gray-600 hover:text-emerald-600 transition-colors">Shopping Tips</a>
             <button class="btn-primary add-to-browser-btn">Add to Browser</button>
           </nav>
