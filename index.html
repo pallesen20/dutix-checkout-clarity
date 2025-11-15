@@ -22,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body class="bg-white">
@@ -85,24 +86,24 @@
           
           <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div class="modern-card p-8 text-center">
-              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl font-bold text-blue-600">1</span>
+              <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-emerald-600">1</span>
               </div>
               <h3 class="text-xl font-semibold mb-3">Install Extension</h3>
               <p class="text-gray-600">Add Dutix to your Chrome browser in one click. No sign-up required.</p>
             </div>
             
             <div class="modern-card p-8 text-center">
-              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl font-bold text-blue-600">2</span>
+              <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-emerald-600">2</span>
               </div>
               <h3 class="text-xl font-semibold mb-3">Shop Normally</h3>
               <p class="text-gray-600">Browse your favorite online stores just like you always do.</p>
             </div>
             
             <div class="modern-card p-8 text-center">
-              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span class="text-2xl font-bold text-blue-600">3</span>
+              <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-emerald-600">3</span>
               </div>
               <h3 class="text-xl font-semibold mb-3">See Real Prices</h3>
               <p class="text-gray-600">Dutix automatically shows the final price with all fees included.</p>
@@ -241,21 +242,27 @@
           
           <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div class="modern-card p-6">
-              <div class="text-4xl mb-4">💰</div>
+              <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                <i data-lucide="dollar-sign" class="w-6 h-6 text-emerald-600"></i>
+              </div>
               <h3 class="text-xl font-semibold mb-3">Save Money</h3>
               <p class="text-gray-600 mb-4">Know the true cost before buying and avoid expensive surprises at your door.</p>
               <p class="text-sm text-emerald-600 font-semibold">Average savings: $45 per order</p>
             </div>
             
             <div class="modern-card p-6">
-              <div class="text-4xl mb-4">⚡</div>
+              <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                <i data-lucide="zap" class="w-6 h-6 text-emerald-600"></i>
+              </div>
               <h3 class="text-xl font-semibold mb-3">Instant Calculation</h3>
               <p class="text-gray-600 mb-4">Get real-time pricing updates as you shop. No manual calculations needed.</p>
               <p class="text-sm text-emerald-600 font-semibold">Results in under 1 second</p>
             </div>
             
             <div class="modern-card p-6">
-              <div class="text-4xl mb-4">🌍</div>
+              <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                <i data-lucide="globe" class="w-6 h-6 text-emerald-600"></i>
+              </div>
               <h3 class="text-xl font-semibold mb-3">Global Coverage</h3>
               <p class="text-gray-600 mb-4">Works with thousands of stores worldwide. Shop from anywhere with confidence.</p>
               <p class="text-sm text-emerald-600 font-semibold">150+ countries supported</p>
@@ -400,16 +407,23 @@
         </button>
         
         <div class="text-center">
-          <div class="text-6xl mb-4">🚀</div>
+          <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="rocket" class="w-8 h-8 text-emerald-600"></i>
+          </div>
           <h3 class="text-2xl font-bold mb-4">Coming Very Soon!</h3>
           <p class="text-gray-600 mb-6">
             Our browser extension will be available for download very soon. Get ready to see the true price before you buy!
           </p>
           <button id="closeDialogBtn" class="btn-primary w-full">Got it!</button>
         </div>
+        </div>
       </div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+    </script>
   </body>
 </html>
