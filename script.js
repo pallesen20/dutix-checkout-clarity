@@ -5,6 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
   const dialog = document.getElementById('comingSoonDialog');
   const closeDialogBtn = document.getElementById('closeDialog');
   const closeDialogBtnAlt = document.getElementById('closeDialogBtn');
+  const addToBrowserBtns = document.querySelectorAll('.add-to-browser-btn'); // ADD THIS LINE
+  
+  // Open dialog when "Add to Browser" buttons are clicked
+  addToBrowserBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      dialog?.classList.remove('hidden');
+      dialog?.classList.add('flex');
+    });
+  });
 
   // Close dialog
   function closeDialog() {
