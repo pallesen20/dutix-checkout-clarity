@@ -1,37 +1,15 @@
 // Dutix JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Mobile Menu Toggle
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const menuIcon = mobileMenuBtn?.querySelector('.menu-icon');
-  const closeIcon = mobileMenuBtn?.querySelector('.close-icon');
-
-  if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', function() {
-      mobileMenu.classList.toggle('hidden');
-      menuIcon?.classList.toggle('hidden');
-      closeIcon?.classList.toggle('hidden');
-    });
-  }
-
   // Coming Soon Dialog
   const dialog = document.getElementById('comingSoonDialog');
   const closeDialogBtn = document.getElementById('closeDialog');
   const closeDialogBtnAlt = document.getElementById('closeDialogBtn');
-  const addToBrowserBtns = document.querySelectorAll('.add-to-browser-btn');
-
-  // Show dialog when any "Add to Browser" button is clicked
-  addToBrowserBtns.forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      dialog?.classList.add('show');
-    });
-  });
 
   // Close dialog
   function closeDialog() {
-    dialog?.classList.remove('show');
+    dialog?.classList.remove('flex');
+    dialog?.classList.add('hidden');
   }
 
   closeDialogBtn?.addEventListener('click', closeDialog);
@@ -46,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Close dialog on Escape key
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && dialog?.classList.contains('show')) {
+    if (e.key === 'Escape' && dialog?.classList.contains('flex')) {
       closeDialog();
     }
   });
