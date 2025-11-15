@@ -65,7 +65,7 @@ body {
 .text-green {
   color: var(--green-color);
 }
-.hover\:text-blue-600:hover {
+.hover\:text-green:hover {
   color: var(--green-color);
 }
 @media (max-width: 768px) {
