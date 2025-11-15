@@ -59,7 +59,7 @@ body {
 #comingSoonDialog {
   display: none;
 }
-.text.green {
+.text-green {
   color: #059669;
 }
 @media (max-width: 768px) {
