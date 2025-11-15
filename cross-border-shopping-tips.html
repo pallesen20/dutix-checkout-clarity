@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body class="bg-white">
@@ -101,7 +102,7 @@
               <div class="faq-item bg-white rounded-lg shadow-sm overflow-hidden">
                 <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition">
                   <span class="font-semibold text-lg pr-8">Do I have to pay VAT when buying from EU?</span>
-                  <span class="faq-icon text-2xl text-blue-600 flex-shrink-0">+</span>
+                  <span class="faq-icon text-2xl text-emerald-600 flex-shrink-0">+</span>
                 </button>
                 <div class="faq-answer px-6 pb-6 text-gray-600 hidden">
                   <p>When buying from EU countries, VAT rules depend on your location. If you're in the EU buying from another EU country, you typically pay VAT at the seller's rate for goods under €150. For goods over €150, you may need to pay VAT in your country. Non-EU residents generally don't pay EU VAT but may face import duties and VAT in their home country.</p>
@@ -111,7 +112,7 @@
               <div class="faq-item bg-white rounded-lg shadow-sm overflow-hidden">
                 <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition">
                   <span class="font-semibold text-lg pr-8">How to avoid import taxes?</span>
-                  <span class="faq-icon text-2xl text-blue-600 flex-shrink-0">+</span>
+                  <span class="faq-icon text-2xl text-emerald-600 flex-shrink-0">+</span>
                 </button>
                 <div class="faq-answer px-6 pb-6 text-gray-600 hidden">
                   <p>While you cannot legally avoid legitimate import taxes, you can minimize them by: staying within duty-free allowances (typically €22-45 for gifts), choosing products made in countries with trade agreements, buying from local EU/domestic sellers, and understanding de minimis thresholds. Always declare items honestly - false declarations can result in penalties.</p>
@@ -121,7 +122,7 @@
               <div class="faq-item bg-white rounded-lg shadow-sm overflow-hidden">
                 <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition">
                   <span class="font-semibold text-lg pr-8">How to calculate customs duty from USA to UK?</span>
-                  <span class="faq-icon text-2xl text-blue-600 flex-shrink-0">+</span>
+                  <span class="faq-icon text-2xl text-emerald-600 flex-shrink-0">+</span>
                 </button>
                 <div class="faq-answer px-6 pb-6 text-gray-600 hidden">
                   <p>UK customs duty from USA is calculated as: (Item Value + Shipping Cost) × Duty Rate. Most goods have 0-12% duty rates. You'll also pay 20% VAT on the total including duty. Use the UK government's trade tariff tool or HMRC's online calculator. Items under £135 are handled by the seller, while items over £135 require you to pay upon delivery.</p>
@@ -131,7 +132,7 @@
               <div class="faq-item bg-white rounded-lg shadow-sm overflow-hidden">
                 <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition">
                   <span class="font-semibold text-lg pr-8">How to know if I will pay customs fees online?</span>
-                  <span class="faq-icon text-2xl text-blue-600 flex-shrink-0">+</span>
+                  <span class="faq-icon text-2xl text-emerald-600 flex-shrink-0">+</span>
                 </button>
                 <div class="faq-answer px-6 pb-6 text-gray-600 hidden">
                   <p>Check if you'll pay customs fees by: verifying the seller's location vs. your location, checking item value against your country's duty-free threshold, reviewing the product category for duty rates, and looking for 'DDP' (Delivered Duty Paid) or 'DDU' (Delivered Duty Unpaid) in shipping terms. Many online stores now show total costs including duties at checkout.</p>
@@ -143,13 +144,13 @@
       </section>
 
       <!-- CTA Section -->
-      <section class="py-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
+      <section class="py-20 bg-gradient-to-br from-emerald-600 to-teal-700 text-white">
         <div class="container mx-auto px-4 text-center">
           <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Shop Smarter?</h2>
           <p class="text-xl mb-8 max-w-2xl mx-auto text-white/90">
             Install Dutix and never worry about hidden fees again. See the true price before you buy.
           </p>
-          <button class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition add-to-browser-btn">
+          <button class="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition add-to-browser-btn">
             Add to Chrome - It's Free
           </button>
         </div>
@@ -237,5 +238,9 @@
     </style>
 
     <script src="script.js"></script>
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+    </script>
   </body>
 </html>
