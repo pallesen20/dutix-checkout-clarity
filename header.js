@@ -66,13 +66,21 @@ function loadHeader() {
     menuIcon?.classList.toggle('hidden');
     closeIcon?.classList.toggle('hidden');
   });
-  const addToBrowserBtns = document.querySelectorAll('.add-to-browser-btn');
-  addToBrowserBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const dialog = document.getElementById('comingSoonDialog');
-      dialog?.classList.remove('hidden');
-      dialog?.classList.add('flex');
-    });
+  // Open dialog using event delegation (robust against timing)
+  const openDialog = () => {
+    const dialog = document.getElementById('comingSoonDialog');
+    if (!dialog) return;
+    dialog.classList.remove('hidden');
+    dialog.classList.add('flex');
+  };
+
+  document.addEventListener('click', (e) => {
+    const t = e.target;
+    const target = t && t instanceof Element ? t.closest('.add-to-browser-btn') : null;
+    if (target) {
+      e.preventDefault();
+      openDialog();
+    }
   });
 }
 if (document.readyState === 'loading') {
