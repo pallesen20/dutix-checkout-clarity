@@ -28,8 +28,35 @@ function loadHeader() {
         </div>
       </div>
     </header>
+    
+    <!-- Coming Soon Dialog -->
+    <div id="comingSoonDialog" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+      <div class="bg-white rounded-lg shadow-2xl max-w-md w-full p-8 relative">
+        <button id="closeDialog" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="rocket" class="w-8 h-8 text-emerald-600"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Coming Very Soon!</h3>
+          <p class="text-gray-600 mb-6">
+            Our browser extension will be available for download very soon. Get ready to see the true price before you buy!
+          </p>
+          <button id="closeDialogBtn" class="btn-primary w-full">Got it!</button>
+        </div>
+      </div>
+    </div>
   `;
   document.body.insertAdjacentHTML('afterbegin', headerHTML);
+  
+  // Reinitialize Lucide icons for the newly added dialog
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
   const mobileBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const menuIcon = document.querySelector('.menu-icon');
